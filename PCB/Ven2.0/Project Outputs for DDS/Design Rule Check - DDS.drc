@@ -1,13 +1,15 @@
 Protel Design System Design Rule Check
-PCB File : F:\对外项目\信号发生器\PCB\Ven2.0\DDS.PcbDoc
-Date     : 2016/9/6
-Time     : 18:09:57
+PCB File : F:\ExternalProject\信号发生器\PCB\Ven2.0\DDS.PcbDoc
+Date     : 2016/11/8
+Time     : 22:27:22
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-Rule Violations :0
+   Violation between Un-Routed Net Constraint: Net VDD-3.3 Between Track (4060mil,2849mil)(4063mil,2846mil) on Bottom Layer And Track (4237mil,2849mil)(4269mil,2849mil) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net VDD-3.3 Between Track (2836mil,1858mil)(2836mil,1946mil) on Top Layer And Track (2836mil,2096mil)(2846mil,2096mil) on Top Layer 
+Rule Violations :2
 
 Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
 Rule Violations :0
@@ -40,5 +42,5 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 0
-Time Elapsed        : 00:00:02
+Violations Detected : 2
+Time Elapsed        : 00:00:05

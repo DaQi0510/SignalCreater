@@ -1,32 +1,43 @@
-Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Name~String~Name~100|Field=Quantity~Integer~Quantity~100|Field=Value~String~Value~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~DDS.PrjPcb|ReportField=ProjectFullPath~F:\¶ÔÍâÏîÄ¿\ĞÅºÅ·¢ÉúÆ÷\PCB\Ven2.0\DDS.PrjPcb|ReportField=Title~Bill of Materials For Project [DDS.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~103|ReportField=ReportTime~21:11:12|ReportField=ReportDate~2016/6/23|ReportField=ReportDateTime~2016/6/23 21:11:12|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2016/6/23|ReportField=CurrentTime~21:11:04|ReportField=Date~|ReportField=DocumentFullPathAndName~F:\¶ÔÍâÏîÄ¿\ĞÅºÅ·¢ÉúÆ÷\PCB\Ven2.0\TOP.SchDoc|ReportField=DocumentName~TOP.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2016/6/23|ReportField=Organization~|ReportField=ProjectName~DDS.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=Application_BuildNumber~|ReportField=DataSourceFileName~DDS.PrjPcb|ReportField=DataSourceFullPath~F:\¶ÔÍâÏîÄ¿\ĞÅºÅ·¢ÉúÆ÷\PCB\Ven2.0\DDS.PrjPcb
-Capacitor-0603||C1, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C31, C32, C33, C34, C41, C42, C43|0603|Capacitor-0603||30|0.1uF
-Capacitor-0603||C2, C6|0603|Capacitor-0603||2|2.2uF
-Capacitor-0805||C3, C19, C30|0603|Capacitor, Capacitor-0||3|0.1uF
-Capacitor-0603||C4, C5|0603|Capacitor-0603||2|20pF
-Capacitor-0805||C35, C38, C39|0805|Capacitor||3|0.1uf
-µç½âµçÈİ||C36, C37, C40|îãµçÈİ1206£¨A3216£©|µç½âµçÈİ||3|10uF
-DB25||J1|DB25Ä¸Í·|DB25||1|DB25Ä¸Í·
-°´¼ü||K1|ÌùÆ¬°´¼ü|°´¼ü||1|
-°´¼ü||K2, K3|2MM½ÓÏß¶Ë×Ó|°´¼ü||2|
-Inductor||L1|0805|Ind||1|10uH
-LED||LED1|LED-0805|LED||1|LED
-¶Ë×Ó||P1, P6|2MM½ÓÏß¶Ë×Ó|¶Ë×Ó||2|
-¶Ë×Ó3||P2, P3, P4, P5|3MM½ÓÏß¶Ë×Ó|¶Ë×Ó3||4|
-Header 2X2|Header, 2-Pin, Dual row|P7|HDR2X2|Header 2X2||1|
-BC847||Q1|BC847B|BC847|BC847B|1|
-Resistor-0603||R1, R4|0603|Resistor-0603||2|20K
-Resistor-0603||R2, R3, R19, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R33|0603|Resistor-0603||14|10K
-Resistor-0603||R5, R7, R8, R45|0603|Resistor-0603||4|100R
-Resistor-0805||R6, R9, R10, R11, R12, R17, R18|0603|Resistor-0||7|10K
-Resistor-0603||R13|0603|Resistor-0603||1|1M
-Resistor-0603||R30, R31, R32, R34, R35, R36, R37, R39|0603|Resistor-0603||8|1K
-Resistor-0603||R38|0603|Resistor-0603||1|4.7K
-Resistor-0603||R40|0603|Resistor-0603||1|2K
-AD8622||U1|LM358-D|AD8622|AD8622|1|
-MAX903||U2|LM358-D|MAX903|MAX903|1|
-STM32F407ZGT6||U3|Stm32f407ZET6 - duplicate|STM32F407ZET6||1|STM32F407ZET6
-AT24C02||U5|AT24C02|AT24C02|AT24C02|1|
-OLED||U6|OLED|O|OLED|1|
-74LVC4245||U7|74LVC4245-PW|74LVC4245|74LVC4245|1|
-LT1963||U8|LT1963|L||1|
-3225ÎŞÔ´¾§Õñ||X1|3225ÎŞÔ´¾§Õñ|3225ÎŞÔ´¾§Õñ||1|8M
+ï»¿Field=#~Integer~#~50|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Name~String~Name~100|Field=Quantity~Integer~Quantity~100|Field=Value~String~Value~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~DDS.PrjPcb|ReportField=ProjectFullPath~F:\ExternalProject\ä¿¡å·å‘ç”Ÿå™¨\PCB\Ven2.0\DDS.PrjPcb|ReportField=Title~Bill of Materials For Project [DDS.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~127|ReportField=ReportTime~9:01:44|ReportField=ReportDate~2016/11/9|ReportField=ReportDateTime~2016/11/9 9:01:44|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2016/11/9|ReportField=CurrentTime~9:01:03|ReportField=Date~|ReportField=DocumentFullPathAndName~F:\ExternalProject\ä¿¡å·å‘ç”Ÿå™¨\PCB\Ven2.0\TOP.SchDoc|ReportField=DocumentName~TOP.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2016/11/6|ReportField=Organization~|ReportField=ProjectName~DDS.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~DDS.PrjPcb|ReportField=DataSourceFullPath~F:\ExternalProject\ä¿¡å·å‘ç”Ÿå™¨\PCB\Ven2.0\DDS.PrjPcb
+1||C1, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C31, C32, C33, C34, C41, C42, C43, C46, C51, C52, C54|0603|Capacitor-0603||34|0.1uF
+2||C2, C6|0603|Capacitor-0603||2|2.2uF
+3||C3, C19, C30|0603|Capacitor-0, Capacitor, Capacitor-0||3|0.1uF
+4||C4, C5|0603|Capacitor-0603||2|20pF
+5||C35, C38, C39|0805|Capacitor||3|0.1uf
+6||C36, C37, C40|é’½ç”µå®¹1206ï¼ˆA3216ï¼‰|ç”µè§£ç”µå®¹||3|10uF
+7||C44, C45|0603|Capacitor-0603||2|4.7uF
+8||C47|0805|Capacitor||1|0.47uF
+9||C48|0603|Capacitor-0603||1|100pF
+10||C49|0805|Capacitor||1|4.7uF
+11||C50|0805|Capacitor||1|10uF
+12||C53|0603|Capacitor||1|0.01uF
+13||D1|SMBJ20A|SMBJ20A|MBR0520|1|
+14||J1|DB25æ¯å¤´|DB25||1|DB25æ¯å¤´
+15||K1|è´´ç‰‡æŒ‰é”®|æŒ‰é”®||1|
+16||K2, K3|2MMæ¥çº¿ç«¯å­|æŒ‰é”®||2|
+17||L1, L2, L3, L4|0805|Ind, Inductor, Inductor, Inductor||4|10uH
+18||LED1|LED-0805|LED||1|LED
+19||P1, P6|2MMæ¥çº¿ç«¯å­|ç«¯å­||2|
+20||P2, P3, P4, P5|3MMæ¥çº¿ç«¯å­|ç«¯å­3||4|
+21|Header, 2-Pin, Dual row|P7|HDR2X2|Header 2X2||1|
+22||R1, R4|0603|Resistor-0603||2|20K
+23||R2, R3, R15, R19, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R38|0603|Resistor-0603||15|10K
+24||R5, R45|0603|Resistor-0603||2|20R
+25||R6, R9, R10, R11, R12, R17, R18|0603|Resistor-0||7|10K
+26||R7|0603|Resistor-0603||1|50R
+27||R8|0603|Resistor-0603||1|100R
+28||R13|0603|Resistor-0603||1|1M
+29||R14|0603|Resistor-0603||1|200R
+30||R16|0603|Resistor-0603||1|73.2K
+31||R30, R31, R32, R33, R34, R35, R36, R37, R39, R42, R43, R44, R46|0603|Resistor-0603||13|1K
+32||R40|0603|Resistor-0603||1|2K
+33||R41|0603|Resistor-0603||1|24.9K
+34||U1|LM358-D|AD8622|AD8622|1|
+35||U2|LM358-D|MAX903|MAX903|1|
+36||U3|Stm32f407ZET6 - duplicate|STM32F407ZET6||1|STM32F407ZET6
+37||U4|SOT23-5|LT1617ES5||1|LT1617ES5
+38||U5|AT24C02|AT24C02|AT24C02|1|
+39||U6|OLED|O|OLED|1|
+40||U7, U9|74LVC4245-PW|74LVC4245|74LVC4245|2|
+41||U8|LT1963|LT1763||1|LT1763
+42||X1|3225æ— æºæ™¶æŒ¯|3225æ— æºæ™¶æŒ¯||1|8M
