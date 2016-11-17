@@ -1,0 +1,32 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Name~String~Name~100|Field=Quantity~Integer~Quantity~100|Field=Value~String~Value~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~DDS.PrjPcb|ReportField=ProjectFullPath~F:\对外项目\信号发生器\PCB\Ven2.0\DDS.PrjPcb|ReportField=Title~Bill of Materials For Project [DDS.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~103|ReportField=ReportTime~21:11:12|ReportField=ReportDate~2016/6/23|ReportField=ReportDateTime~2016/6/23 21:11:12|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2016/6/23|ReportField=CurrentTime~21:11:04|ReportField=Date~|ReportField=DocumentFullPathAndName~F:\对外项目\信号发生器\PCB\Ven2.0\TOP.SchDoc|ReportField=DocumentName~TOP.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2016/6/23|ReportField=Organization~|ReportField=ProjectName~DDS.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=Application_BuildNumber~|ReportField=DataSourceFileName~DDS.PrjPcb|ReportField=DataSourceFullPath~F:\对外项目\信号发生器\PCB\Ven2.0\DDS.PrjPcb
+Capacitor-0603||C1, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C31, C32, C33, C34, C41, C42, C43|0603|Capacitor-0603||30|0.1uF
+Capacitor-0603||C2, C6|0603|Capacitor-0603||2|2.2uF
+Capacitor-0805||C3, C19, C30|0603|Capacitor, Capacitor-0||3|0.1uF
+Capacitor-0603||C4, C5|0603|Capacitor-0603||2|20pF
+Capacitor-0805||C35, C38, C39|0805|Capacitor||3|0.1uf
+电解电容||C36, C37, C40|钽电容1206（A3216）|电解电容||3|10uF
+DB25||J1|DB25母头|DB25||1|DB25母头
+按键||K1|贴片按键|按键||1|
+按键||K2, K3|2MM接线端子|按键||2|
+Inductor||L1|0805|Ind||1|10uH
+LED||LED1|LED-0805|LED||1|LED
+端子||P1, P6|2MM接线端子|端子||2|
+端子3||P2, P3, P4, P5|3MM接线端子|端子3||4|
+Header 2X2|Header, 2-Pin, Dual row|P7|HDR2X2|Header 2X2||1|
+BC847||Q1|BC847B|BC847|BC847B|1|
+Resistor-0603||R1, R4|0603|Resistor-0603||2|20K
+Resistor-0603||R2, R3, R19, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R33|0603|Resistor-0603||14|10K
+Resistor-0603||R5, R7, R8, R45|0603|Resistor-0603||4|100R
+Resistor-0805||R6, R9, R10, R11, R12, R17, R18|0603|Resistor-0||7|10K
+Resistor-0603||R13|0603|Resistor-0603||1|1M
+Resistor-0603||R30, R31, R32, R34, R35, R36, R37, R39|0603|Resistor-0603||8|1K
+Resistor-0603||R38|0603|Resistor-0603||1|4.7K
+Resistor-0603||R40|0603|Resistor-0603||1|2K
+AD8622||U1|LM358-D|AD8622|AD8622|1|
+MAX903||U2|LM358-D|MAX903|MAX903|1|
+STM32F407ZGT6||U3|Stm32f407ZET6 - duplicate|STM32F407ZET6||1|STM32F407ZET6
+AT24C02||U5|AT24C02|AT24C02|AT24C02|1|
+OLED||U6|OLED|O|OLED|1|
+74LVC4245||U7|74LVC4245-PW|74LVC4245|74LVC4245|1|
+LT1963||U8|LT1963|L||1|
+3225无源晶振||X1|3225无源晶振|3225无源晶振||1|8M

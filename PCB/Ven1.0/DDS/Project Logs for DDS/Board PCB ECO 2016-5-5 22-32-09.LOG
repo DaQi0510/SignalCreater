@@ -1,0 +1,19 @@
+Added Component: Designator=J5(DB25ĸͷ)
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ5_2 Pin=J5-2
+Added Pin To Net: NetName=NetJ5_3 Pin=J5-3
+Added Pin To Net: NetName=NetJ5_4 Pin=J5-4
+Added Pin To Net: NetName=NetJ5_5 Pin=J5-5
+Added Pin To Net: NetName=NetJ5_6 Pin=J5-6
+Added Pin To Net: NetName=NetJ5_7 Pin=J5-7
+Added Pin To Net: NetName=NetJ5_8 Pin=J5-8
+Added Pin To Net: NetName=GND Pin=J5-10
+Added Pin To Net: NetName=GND Pin=J5-11
+Added Pin To Net: NetName=GND Pin=J5-12
+Added Pin To Net: NetName=GND Pin=J5-13
+Added Pin To Net: NetName=GND Pin=J5-14
+Added Pin To Net: NetName=GND Pin=J5-15
+Added Pin To Net: NetName=VCC-5 Pin=J5-18
+Added Pin To Net: NetName=NetJ5_19 Pin=J5-19
+Added Pin To Net: NetName=NetJ5_20 Pin=J5-20
+Added Member To Class: ClassName=U_Module Member=Component J5 DB25
