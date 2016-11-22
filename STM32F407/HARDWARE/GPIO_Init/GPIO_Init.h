@@ -14,7 +14,10 @@
 #define AD7  PCout(1)      
 #define AD8  PCout(0) 
 
-#define AD9  PFout(8)
+#define Key_Out1   PFout(6)
+#define Key_Out21  PFout(9)
+#define Key_Out22  PFout(7)
+#define Key_Out23  PFout(8)
 
 
 #define B1  PDin(15) 

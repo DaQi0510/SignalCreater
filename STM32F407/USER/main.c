@@ -12,7 +12,6 @@ volatile u8 ADNum;
 volatile u16 Squa_Fre;
 volatile u16 Sine_Fre;
 volatile u16 Sine_Amp;
-volatile u8 Switch_Flag;  //标记开关状态
 volatile u8 Switch_Flag1;
 volatile u8 Switch_Flag2;
 
@@ -20,7 +19,8 @@ volatile u8 ADNumt;
 volatile u16 Squa_Fret;
 volatile u16 Sine_Fret;
 volatile u16 Sine_Ampt;
-volatile u8 Switch_Flagt;
+volatile u8 Switch_Flagt1;
+volatile u8 Switch_Flagt2;
 
 volatile u16 tableSize;
 volatile u16 FreqNum;
@@ -39,46 +39,41 @@ int main(void)
 	AT24C02_Init();
 	LCD_Init();
 	StartInit();
-	Switch_Flagt=3;
-//	ADNum=100;
-//	Squa_Fre=100;
-//	Sine_Fret=100;																																																																																																											
-//  Sine_Amp=100;
-
 	while(1)
 	{
 		//AD转换
 		CheckFlag();
-		if(Switch_Flag!=Switch_Flagt)    //开关状态变化，执行相关动作
+		if(Switch_Flag1!=Switch_Flagt1)
 		{
-			if(Switch_Flag==1)    
+			Switch_Flagt1=Switch_Flag1;
+			if(Switch_Flagt1==1)
 			{
-				Sine_Fret=Sine_Fre;
-				sin_Generation(Sine_Fret,Sine_Amp);	
-				FreqNum=42000000/Sine_Fret/tableSize-1;
-				TIM6_Configuration(FreqNum);
-				DAC_DMA_Configuration(); 
-				delay_ms(70);
-				AD9 =0;
-				ADNumt=ADNum;
-				SetAD(ADNumt);
-				delay_ms(10);
+				Key_Out1=1;
 			}
-			if(Switch_Flag==0)
-			{
-				Sine_Fret=Sine_Fre;
-				sin_Generation(Sine_Fret,0);	
-				FreqNum=42000000/Sine_Fret/tableSize-1;
-				TIM6_Configuration(FreqNum);
-				DAC_DMA_Configuration(); 
-				AD9 =1;
-				SetAD(0);
-				delay_ms(10);
-			}
-			Switch_Flagt=Switch_Flag;
-			LCD_ShowSwitch_Flag(Switch_Flag);
+			else
+				Key_Out1=0;	
+			LCD_ShowSwitch_Flag1(Switch_Flagt1);
 		}
-		if((ADNumt!=ADNum)&&(Switch_Flagt==1))//AD数值变化，并且开关闭合，执行相关动作
+		if(Switch_Flag2!=Switch_Flagt2)
+		{
+			Switch_Flagt2=Switch_Flag2;
+			if(Switch_Flagt2==1)
+			{
+				Key_Out21=1;
+				delay_ms(10);
+				Key_Out22=1;
+				delay_ms(10);
+				Key_Out23=1;
+			}
+			else
+			{
+				Key_Out21=0;
+				Key_Out22=0;
+				Key_Out23=0;
+			}
+			LCD_ShowSwitch_Flag2(Switch_Flagt2);
+		}
+		if((ADNumt!=ADNum))//AD数值变化，并且开关闭合，执行相关动作
 		{
 			ADNumt=ADNum;
 			SetAD(ADNumt);
@@ -94,7 +89,7 @@ int main(void)
 			delay_ms(10);
 		}
 		//正弦波频率设置
-		if((Sine_Fret!=Sine_Fre)&&(Switch_Flagt==1))
+		if((Sine_Fret!=Sine_Fre))
 		{
 			Sine_Fret=Sine_Fre;
       sin_Generation(Sine_Fret,Sine_Amp);	
@@ -105,7 +100,7 @@ int main(void)
 		}
 		
 		//正弦波幅值设置
-		if((Sine_Ampt!=Sine_Amp)&&(Switch_Flagt==1))
+		if((Sine_Ampt!=Sine_Amp))
 		{
 			Sine_Ampt=Sine_Amp;
 			sin_Generation(Sine_Fret,Sine_Ampt);	
@@ -125,21 +120,21 @@ void StartInit(void)
 	ADNumt=ADNum;
 	LCD_ShowADNum(ADNum);
 	//开关状态监测
-	if(PDin(0)==0)    //开关闭合
-	{
-		Switch_Flag =1;
-//		AD9=0;
-//		ADNumt=ADNum;
-//		SetAD(ADNumt);
-	}
-	else            //开关打开
-	{
-		Switch_Flag =0;
-//		AD9=1;
-//		ADNumt=ADNum;
-//		SetAD(0);
-	}
-	LCD_ShowSwitch_Flag(Switch_Flag);
+//	if(PDin(0)==0)    //开关闭合
+//	{
+//		Switch_Flag =1;
+////		AD9=0;
+////		ADNumt=ADNum;
+////		SetAD(ADNumt);
+//	}
+//	else            //开关打开
+//	{
+//		Switch_Flag =0;
+////		AD9=1;
+////		ADNumt=ADNum;
+////		SetAD(0);
+//	}
+//	LCD_ShowSwitch_Flag1(Switch_Flag);
 	//方波频率设置部分
 	Squa_Fre =AT24C02_ReadOneByte(0x01);
 	Squa_Fre<<=8;
@@ -161,12 +156,36 @@ void StartInit(void)
 	Sine_Amp +=AT24C02_ReadOneByte(0x06);
 	LCD_ShowSine_Amp(Sine_Amp);
 	
-	if(Sine_Amp<50)
-		Sine_Ampt=50;
-//	sin_Generation(Sine_Fre,Sine_Ampt);	
-//	FreqNum=42000000/Sine_Fre/tableSize-1;
-//	TIM6_Configuration(FreqNum);
-//	DAC_DMA_Configuration();
+  Sine_Ampt=Sine_Amp;
+	sin_Generation(Sine_Fre,Sine_Ampt);	
+	FreqNum=42000000/Sine_Fre/tableSize-1;
+	TIM6_Configuration(FreqNum);
+	DAC_DMA_Configuration();
+	CheckFlag();
+	Switch_Flagt1=Switch_Flag1;
+	if(Switch_Flagt1==1)
+	{
+		Key_Out1=1;
+	}
+	else
+		Key_Out1=0;	
+	LCD_ShowSwitch_Flag1(Switch_Flagt1);
+	Switch_Flagt2=Switch_Flag2;
+	if(Switch_Flagt2==1)
+	{
+		Key_Out21=1;
+		delay_ms(10);
+		Key_Out22=1;
+		delay_ms(10);
+		Key_Out23=1;
+	}
+	else
+	{
+		Key_Out21=0;
+		Key_Out22=0;
+		Key_Out23=0;
+	}
+	LCD_ShowSwitch_Flag2(Switch_Flagt2);
 	delay_ms(20);
 }
 void CheckFlag(void)
@@ -179,13 +198,5 @@ void CheckFlag(void)
 		Switch_Flag2=1;
 	else
 		Switch_Flag2=0;
-	if((PDin(0)==0)||(PDin(1)==0))   //低电平，开关闭合
-	{
-		Switch_Flag=1;
-	}
-	else 
-	{
-		Switch_Flag=0;
-	}
 	delay_ms(10);
 }

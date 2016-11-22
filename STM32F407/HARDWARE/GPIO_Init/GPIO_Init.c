@@ -7,7 +7,6 @@ extern volatile u16 Sine_Fre;
 extern volatile u16 Sine_Amp;
 extern volatile u8 Switch_Flag1;
 extern volatile u8 Switch_Flag2;
-extern volatile u8 Switch_Flag;
 void Gpio_Init(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure;
@@ -48,8 +47,9 @@ void Gpio_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;//上拉
   GPIO_Init(GPIOC, &GPIO_InitStructure);//初始化GPIO	
 	
+	//开关控制输出部分
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE);
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;//普通输出模式
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;//推挽输出
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;//100MHz
@@ -179,10 +179,7 @@ void EXTI0_IRQHandler(void)
 		{
 			Switch_Flag1=0;
 		}
-		if((Switch_Flag1==1)||(Switch_Flag2==1))
-			Switch_Flag=1;
-		else
-			Switch_Flag=0;
+		
 //		LCD_ShowSwitch_Flag(Switch_Flag);
 		EXTI_ClearITPendingBit(EXTI_Line0);
 	}
@@ -201,10 +198,6 @@ void EXTI1_IRQHandler(void)
 		{
 			Switch_Flag2=0;
 		}
-		if((Switch_Flag1==1)||(Switch_Flag2==1))
-			Switch_Flag=1;
-		else
-			Switch_Flag=0;
 //		LCD_ShowSwitch_Flag(Switch_Flag);
 		EXTI_ClearITPendingBit(EXTI_Line1);
 	}
@@ -242,17 +235,17 @@ void EXTI3_IRQHandler(void)
 		Delays();
 		if(B2==1)
 		{
-			if(Squa_Fre>=1200)
-				Squa_Fre=1200;
+			if(Squa_Fre>=100)
+				Squa_Fre=100;
 			else
-			 Squa_Fre +=10;
+			 Squa_Fre +=5;
 		}
 		else
 		{
 			if(Squa_Fre<=20)
 				Squa_Fre=20;
 			else
-				Squa_Fre -=10;
+				Squa_Fre -=5;
 		}
 		AT24C02_WriteOneByte(0x01,Squa_Fre/256);
 		AT24C02_WriteOneByte(0x02,Squa_Fre%256);

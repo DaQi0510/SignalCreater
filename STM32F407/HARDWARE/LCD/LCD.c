@@ -461,19 +461,35 @@ void LCD_Display(void)
 	  for(j=0;j<6;j++)     
 			LCD_WrDat(F6x8[M4[i]][j]); 
 	}
-	LCD_Set_Pos(40,7);
+	LCD_Set_Pos(11,7);
 	for(j=0;j<6;j++)     
 		LCD_WrDat(F6x8[47][j]); 
-	LCD_Set_Pos(46,7);
+	LCD_Set_Pos(17,7);
 	for(j=0;j<6;j++)     
 		LCD_WrDat(F6x8[78][j]); 
-	LCD_Set_Pos(80,7);
+	LCD_Set_Pos(37,7);
 	for(j=0;j<6;j++)     
 		LCD_WrDat(F6x8[47][j]); 
-	LCD_Set_Pos(86,7);
+	LCD_Set_Pos(43,7);
 	for(j=0;j<6;j++)     
 		LCD_WrDat(F6x8[70][j]); 
-	LCD_Set_Pos(92,7);
+	LCD_Set_Pos(49,7);
+	for(j=0;j<6;j++)     
+		LCD_WrDat(F6x8[70][j]); 
+	
+	LCD_Set_Pos(75,7);
+	for(j=0;j<6;j++)     
+		LCD_WrDat(F6x8[47][j]); 
+	LCD_Set_Pos(81,7);
+	for(j=0;j<6;j++)     
+		LCD_WrDat(F6x8[78][j]); 
+	LCD_Set_Pos(101,7);
+	for(j=0;j<6;j++)     
+		LCD_WrDat(F6x8[47][j]); 
+	LCD_Set_Pos(107,7);
+	for(j=0;j<6;j++)     
+		LCD_WrDat(F6x8[70][j]); 
+	LCD_Set_Pos(113,7);
 	for(j=0;j<6;j++)     
 		LCD_WrDat(F6x8[70][j]); 
 }
@@ -640,25 +656,48 @@ void LCD_ShowSine_Amp(u16 Value)
 		LCD_WrDat(F6x8[16+i][j]); 
 }
 
-void LCD_ShowSwitch_Flag(u8 Value)
+void LCD_ShowSwitch_Flag1(u8 Value)
 {
 	u8 i,j;
 	if(Value==1)    //开关闭合	
 	{
-		LCD_Set_Pos(30,7);
+		LCD_Set_Pos(2,7);
 		for(j=0;j<6;j++)     
 			LCD_WrDat(F6x8[10][j]);
-		LCD_Set_Pos(70,7);
+		LCD_Set_Pos(28,7);
 		for(j=0;j<6;j++)     
 			LCD_WrDat(0);
 	}
 	else
 	{
-		LCD_Set_Pos(70,7);
-		for(j=0;j<6;j++)     
-			LCD_WrDat(F6x8[10][j]);
-		LCD_Set_Pos(30,7);
+		LCD_Set_Pos(2,7);
 		for(j=0;j<6;j++)     
 			LCD_WrDat(0);
+		LCD_Set_Pos(28,7);
+		for(j=0;j<6;j++)     
+			LCD_WrDat(F6x8[10][j]);
+	}
+}
+
+void LCD_ShowSwitch_Flag2(u8 Value)
+{
+	u8 i,j;
+	if(Value==1)    //开关闭合	
+	{
+		LCD_Set_Pos(67,7);
+		for(j=0;j<6;j++)     
+			LCD_WrDat(F6x8[10][j]);
+		LCD_Set_Pos(92,7);
+		for(j=0;j<6;j++)     
+			LCD_WrDat(0);
+	}
+	else
+	{
+		LCD_Set_Pos(67,7);
+		for(j=0;j<6;j++)     
+			LCD_WrDat(0);
+		LCD_Set_Pos(92,7);
+		for(j=0;j<6;j++)     
+			LCD_WrDat(F6x8[10][j]);
 	}
 }

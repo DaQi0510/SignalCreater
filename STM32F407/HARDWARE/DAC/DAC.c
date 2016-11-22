@@ -26,33 +26,33 @@ void sin_Generation(u16 Fre,u16 Vol)
 	{
 		for(n=0;n<tableSize/2;n++)
 		{
-			sinTable[n] =n*2*Voltage/tableSize+80;	
+			sinTable[n] =n*2*Voltage/tableSize+60;	
 		}
 		for(n=tableSize/2;n<tableSize;n++)
 		{
-			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+80;	
+			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+60;	
 		}
 	}
 	if((Voltage<=40)&&(Voltage>=10))
 	{
 		for(n=0;n<tableSize/2;n++)
 		{
-			sinTable[n] =n*2*Voltage/tableSize+150;	
+			sinTable[n] =n*2*Voltage/tableSize+85;	
 		}
 		for(n=tableSize/2;n<tableSize;n++)
 		{
-			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+150;	
+			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+85;	
 		}
 	}
 	if(Voltage==0)
 	{
 		for(n=0;n<tableSize/2;n++)
 		{
-			sinTable[n] =n*2*Voltage/tableSize+300;	
+			sinTable[n] =n*2*Voltage/tableSize+100;	
 		}
 		for(n=tableSize/2;n<tableSize;n++)
 		{
-			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+300;	
+			sinTable[n] =Voltage-(2*n+2-tableSize)*Voltage/tableSize+100;	
 		}
 	}
 	

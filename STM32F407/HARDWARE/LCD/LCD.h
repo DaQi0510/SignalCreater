@@ -25,7 +25,8 @@
  void LCD_ShowSqua_Fre(u16 Value);
  void LCD_ShowSine_Fre(u16 Value);
  void LCD_ShowSine_Amp(u16 Value);
- void LCD_ShowSwitch_Flag(u8 Value);
+ void LCD_ShowSwitch_Flag1(u8 Value);
+ void LCD_ShowSwitch_Flag2(u8 Value);
  
 #endif
 
