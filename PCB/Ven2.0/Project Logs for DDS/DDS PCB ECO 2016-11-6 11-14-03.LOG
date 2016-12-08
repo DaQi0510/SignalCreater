@@ -1,3 +1,0 @@
-Change Component Footprint: Designator=L2 Old Footprint=色环电感0307 New Footprint=0805
-Change Component Footprint: Designator=L3 Old Footprint=色环电感0307 New Footprint=0805
-Added Member To Class: ClassName=U_Module Member=Component J1 DB25
