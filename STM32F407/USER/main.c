@@ -60,9 +60,9 @@ int main(void)
 			if(Switch_Flagt2==1)
 			{
 				Key_Out21=1;
-				delay_ms(10);
+				delay_ms(100);
 				Key_Out22=1;
-				delay_ms(10);
+				delay_ms(100);
 				Key_Out23=1;
 			}
 			else
